@@ -7,9 +7,8 @@ language:
 pretty_name: Sarcasm
 ---
 # ArSarcasT Corpus
-**ArSarcasT**  Arabic Sarcasic Tweet corpus is a collection of Arabic Tweets manually labeled for Sarcasm Detection. The dataset is published in a CSV format.
-It contains two data files; ArSarcasT-Dev.csv: which includes 21,019 labeled tweets, which contain 5,822 sarcastic examples, and 15,197 non-sarcastic examples.
-The evaluation split is provided separately in ArSarcasT-Test.csv. The evaluation dataset consists of 1,390 sarcastic tweets and 3,608 non-sarcastic tweets.
+
+The **ArSarcasT** corpus is a dataset of Arabic tweets created to detect sarcasm. It includes tweets from previous benchmarking datasets and new tweets related to social and political issues from 2020 to 2022. Native Arabic speakers from Egypt manually annotated the dataset, and the final labels were determined using majority voting. To ensure consistency, the annotators re-annotated the examples from the benchmark datasets, resulting in some differences from the original labels. The dataset consists of 26,014 tweets, of which 28% are sarcastic. It was split into 80/20 for training and testing, with 21,017 tweets in the training split and 5,821 sarcastic tweets. The ArSarcasT corpus is a valuable resource for researchers and real-world applications due to its manual annotation by native speakers and the inclusion of new tweets related to social and political issues.
 
 ## Dataset Citation
 
