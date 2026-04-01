@@ -110,18 +110,24 @@ def analyze_dataset(df: pd.DataFrame, dataset_name: str) -> pd.DataFrame:
 if __name__ == "__main__":
 
     # Load datasets
-    train_df = pd.read_csv(TRAIN_PATH)
-    test_df = pd.read_csv(TEST_PATH)
+    train_df = pd.read_csv(TRAIN_PATH , encoding="utf-8")
+    test_df = pd.read_csv(TEST_PATH , encoding="utf-8")
 
     # Run EDA analysis
     train_summary = analyze_dataset(train_df, "TRAIN")
     test_summary = analyze_dataset(test_df, "TEST")
 
-    # Save results to CSV files (UTF-8 with BOM for Excel compatibility)
-    train_output = os.path.join(BASE_DIR, "eda_train_summary.csv")
-    test_output = os.path.join(BASE_DIR, "eda_test_summary.csv")
+   #Save results to CSV files (UTF-8 with BOM for Excel compatibility)
+  #  train_output = os.path.join(BASE_DIR, "eda_train_summary.csv")
+  #  test_output = os.path.join(BASE_DIR, "eda_test_summary.csv")
 
-    train_summary.to_csv(train_output, index=False, encoding="utf-8-sig")
-    test_summary.to_csv(test_output, index=False, encoding="utf-8-sig")
+   # train_summary.to_csv(train_output, index=False, encoding="utf-8-sig")
+   # test_summary.to_csv(test_output, index=False, encoding="utf-8-sig")
 
     print("\nEDA summaries saved successfully ✔")
+    
+        # --------------------------------------------------------------
+    # Sample Preview (first 5 rows)
+    # --------------------------------------------------------------
+    print("\n=== TRAIN Dataset Sample (5 rows) ===")
+    print(train_df[["TEXT", "LABEL"]].head(5))
